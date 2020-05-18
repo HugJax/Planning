@@ -9,6 +9,12 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Salle {
+public class Salle 
+{
+    //ATTRIBUTS
+    private int m_idSalle;
+    private String m_nom;
+    private int m_capacite;
+    private Site m_site;
     
 }

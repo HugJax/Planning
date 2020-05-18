@@ -9,6 +9,11 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Enseignant {
+public class Enseignant extends Utilisateur
+{
+    //ATTRIBUTS
+    private Cours m_cours;
+    private SeanceEnseignant m_seance;
     
+    //METHODES
 }

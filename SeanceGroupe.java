@@ -9,6 +9,10 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class SeanceGroupe {
+public class SeanceGroupe extends Seance
+{
+    //ATTRIBUTS 
+    private Groupe m_groupe;
+    
     
 }

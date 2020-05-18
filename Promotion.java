@@ -9,6 +9,13 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Promotion {
+public class Promotion 
+{
+    //ATTRIBUTS
+    private int m_idPromo;
+    private String m_nom;
+    private Groupe m_groupe;
+    
+    //METHODES
     
 }

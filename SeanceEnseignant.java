@@ -9,6 +9,10 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class SeanceEnseignant {
+public class SeanceEnseignant extends Seance
+{
+    //ATTRIBUTS 
+    private int m_idEnseignant;
+    
     
 }

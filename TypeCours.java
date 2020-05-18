@@ -5,10 +5,16 @@
  */
 package controleur;
 
+//Indique le type de cours (magistral, TD, TP, ...)
+
 /**
  *
  * @author Rémi Fiorenza
  */
-public class TypeCours {
+public class TypeCours 
+{
+    //ATTRIBUTS
+    private int m_idCcours;
+    private String m_nom;
     
 }

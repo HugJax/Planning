@@ -9,6 +9,12 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Groupe {
+public class Groupe 
+{
+    //ATTRIBUTS
+    private int m_idGroupe;
+    private String m_nom;
+    
+    //METHODES
     
 }

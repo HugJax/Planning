@@ -9,6 +9,9 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class SeanceSalle {
+public class SeanceSalle extends Seance
+{
+    //ATTRIBUTS
+    private Salle m_salle;
     
 }

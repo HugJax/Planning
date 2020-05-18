@@ -9,6 +9,12 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Cours {
+public class Cours 
+{
+    //ATTRIBUTS
+    private int m_idCours;
+    private String m_nom;
+    
+    //METHODES
     
 }

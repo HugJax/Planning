@@ -9,6 +9,13 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class ReferentPedagogique {
+public class ReferentPedagogique extends Utilisateur
+{
+    //ATTRIBUTS
+    
+    
+    
+
+    //METHODES
     
 }

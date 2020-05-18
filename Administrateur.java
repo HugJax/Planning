@@ -9,6 +9,7 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Administrateur {
+public class Administrateur extends Utilisateur
+{
     
 }

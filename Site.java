@@ -9,6 +9,10 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Site {
+public class Site 
+{
+    //ATTRIBUTS
+    private int m_idSite;
+    private String m_nom;
     
 }
