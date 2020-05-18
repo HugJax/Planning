@@ -13,9 +13,6 @@ public class ReferentPedagogique extends Utilisateur
 {
     //ATTRIBUTS
     
-    
-    
-
     //METHODES
     
 }

@@ -1,21 +1,38 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Classe objet correspondant à une promotion
  */
 package controleur;
 
 /**
  *
- * @author Rémi Fiorenza
+ * @author Bastide_Fiorenza_Jacquesy TD05
  */
-public class Promotion 
-{
-    //ATTRIBUTS
-    private int m_idPromo;
-    private String m_nom;
-    private Groupe m_groupe;
+public class Promotion {
+    /// ATTRIBUTS
+    private int m_idpromo;
+    private String m_promo;
     
-    //METHODES
+    /// CONSTRUCTEURS
+    Promotion(){
+        
+    }
     
+    Promotion(int id, String promo){
+        m_idpromo   = id;
+        m_promo     = promo;
+    }
+    
+    /// METHODES
+    /** Fonction de récupération l'ID */
+    public int getID(){
+        return m_idpromo;
+    }
+    
+    /** Fonction de récupération ou pour set la promo */
+    public String getPromo(){
+        return m_promo;
+    }
+    public void setPromo(String promo){
+        m_promo     = promo;
+    }
 }

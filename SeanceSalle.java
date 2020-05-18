@@ -1,13 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Classe objet indiquant la salle utilisée pour la séance
  */
 package controleur;
 
 /**
  *
- * @author Rémi Fiorenza
+ * @author Bastide_Fiorenza_Jacquesy TD05
  */
 public class SeanceSalle extends Seance
 {

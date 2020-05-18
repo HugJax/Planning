@@ -1,18 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Classe objet indiquant le professeur faisant cours
  */
 package controleur;
 
 /**
  *
- * @author Rémi Fiorenza
+ * @author Bastide_Fiorenza_Jacquesy TD05
  */
 public class SeanceEnseignant extends Seance
 {
     //ATTRIBUTS 
-    private int m_idEnseignant;
+    private Enseignant m_enseignant;
     
     
 }

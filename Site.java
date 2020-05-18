@@ -1,18 +1,40 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Classe objet correspondant au batiment utilisé pour faire cours
  */
 package controleur;
 
 /**
  *
- * @author Rémi Fiorenza
+ * @author Bastide_Fiorenza_Jacquesy TD05
  */
 public class Site 
 {
-    //ATTRIBUTS
+    /// ATTRIBUTS
     private int m_idSite;
     private String m_nom;
+    
+    /// CONSTRUCTEURS
+    Site(){
+        
+    }
+    
+    Site(int id, String nom){
+        m_idSite   = id;
+        m_nom     = nom;
+    }
+    
+    /// METHODES
+    /** Fonction de récupération l'ID */
+    public int getID(){
+        return m_idSite;
+    }
+    
+    /** Fonction de récupération ou pour set le lieu */
+    public String getNom(){
+        return m_nom;
+    }
+    public void setNom(String nom){
+        m_nom     = nom;
+    }
     
 }
