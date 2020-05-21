@@ -9,13 +9,25 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public abstract class ReferentPedagogique extends Utilisateur
-{
-    //ATTRIBUTS
+public class SeanceEmploi {
     
+    private Seance m_seanceEmploi;
     
     
 
-    //METHODES
+    SeanceEmploi(Seance s)
+    {
+        s = m_seanceEmploi;
+    }
+    
+    void modifierSeance(Seance s)
+    {
+        
+    }
+    
+    void supprimerSeance(Seance s)
+    {
+        
+    }
     
 }

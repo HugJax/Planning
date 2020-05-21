@@ -97,4 +97,6 @@ public class Seance
         m_cours         = type;
     }
     
+    
+    
 }

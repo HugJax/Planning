@@ -7,14 +7,14 @@ package controleur;
  *
  * @author Bastide_Fiorenza_Jacquesy TD05
  */
-public class Utilisateur {
+abstract class Utilisateur {
     /// ATTIRBUTS
-    private int m_iduser;
-    private String m_email;
-    private String m_mdp;
-    private String m_nom;
-    private String m_prenom;
-    private int m_droit;
+    protected int m_iduser;
+    protected String m_email;
+    protected String m_mdp;
+    protected String m_nom;
+    protected String m_prenom;
+    protected int m_droit;
     
     /// CONSTRUCTEURS
     Utilisateur(){
@@ -75,5 +75,10 @@ public class Utilisateur {
     public int getDroit(){
         return m_droit;
     }
+    
+    abstract void ajouterUtilisateur();         //Méthode abstraite qui permettra d'ajouter un ou plusieurs utilisateurs en fonction de leurs types
+    abstract void supprimerUtilisateur();           //Méthode abstraite qui permettra de supprimer un ou plusieurs utilisateurs en  fonction de leurs types
+    
+    
     
 }

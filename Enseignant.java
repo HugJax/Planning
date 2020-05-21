@@ -9,7 +9,7 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Enseignant extends Utilisateur
+public abstract class Enseignant extends Utilisateur
 {
     //ATTRIBUTS
     private Cours m_cours;

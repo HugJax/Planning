@@ -9,7 +9,7 @@ package controleur;
  *
  * @author Rémi Fiorenza
  */
-public class Etudiant extends Utilisateur
+public abstract class Etudiant extends Utilisateur
 {
     //ATTRIBUTS
     private int m_numero;
