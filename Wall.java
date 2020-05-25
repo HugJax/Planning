@@ -8,6 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import Controleur.*;
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class Wall extends JFrame{
       for(int i=1;i<=52;i++){
           onglet[i] = new JPanel();
           edtsemaines[i] = new JLabel("onglet correspondant à la semaine " + i);
+          onglet[i].add(new SeanceBouton(),BorderLayout.CENTER);
       }
       for(int i=1;i<=52;i++){
           onglet[i].add(edtsemaines[i]);
