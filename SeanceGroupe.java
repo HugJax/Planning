@@ -1,7 +1,7 @@
 /*
  * Classe objet correspondant au groupe d'étudiant suivant le cours
  */
-package controleur;
+package Controleur;
 
 /**
  *

@@ -4,12 +4,6 @@
 package Controleur;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.io.IOException;
-import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
