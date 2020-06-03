@@ -277,25 +277,25 @@ INSERT INTO `salle`(`Nom`, `Capacite`, `IDsite`)
 
 -- Séance
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (22, 20200529, 8, 9, 1, (SELECT IDcours FROM cours WHERE IDcours=1), (SELECT IDtypecours FROM typecours WHERE IDtypecours=2));
+	VALUES (22, 3, 8, 9, 1, (SELECT IDcours FROM cours WHERE IDcours=2), (SELECT IDtypecours FROM typecours WHERE IDtypecours=2));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200602, 8, 9, 1, (SELECT IDcours FROM cours WHERE IDcours=1), (SELECT IDtypecours FROM typecours WHERE IDtypecours=3));
+	VALUES (23, 1, 8, 9, 3, (SELECT IDcours FROM cours WHERE IDcours=3), (SELECT IDtypecours FROM typecours WHERE IDtypecours=3));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200602, 9, 10, 1, (SELECT IDcours FROM cours WHERE IDcours=2), (SELECT IDtypecours FROM typecours WHERE IDtypecours=4));
+	VALUES (23, 1, 9, 10, 2, (SELECT IDcours FROM cours WHERE IDcours=2), (SELECT IDtypecours FROM typecours WHERE IDtypecours=4));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200603, 11, 12, 1, (SELECT IDcours FROM cours WHERE IDcours=2), (SELECT IDtypecours FROM typecours WHERE IDtypecours=5));
+	VALUES (23, 2, 11, 12, 3, (SELECT IDcours FROM cours WHERE IDcours=5), (SELECT IDtypecours FROM typecours WHERE IDtypecours=5));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200601, 15, 17, 1, (SELECT IDcours FROM cours WHERE IDcours=3), (SELECT IDtypecours FROM typecours WHERE IDtypecours=1));
+	VALUES (23, 1, 10, 12, 1, (SELECT IDcours FROM cours WHERE IDcours=5), (SELECT IDtypecours FROM typecours WHERE IDtypecours=1));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200601, 8, 10, 1, (SELECT IDcours FROM cours WHERE IDcours=3), (SELECT IDtypecours FROM typecours WHERE IDtypecours=1));
+	VALUES (23, 3, 8, 10, 2, (SELECT IDcours FROM cours WHERE IDcours=1), (SELECT IDtypecours FROM typecours WHERE IDtypecours=1));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (24, 20200611, 13, 14, 1, (SELECT IDcours FROM cours WHERE IDcours=4), (SELECT IDtypecours FROM typecours WHERE IDtypecours=6));
+	VALUES (24, 4, 13, 14, 2, (SELECT IDcours FROM cours WHERE IDcours=4), (SELECT IDtypecours FROM typecours WHERE IDtypecours=6));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (24, 20200611, 10, 11, 1, (SELECT IDcours FROM cours WHERE IDcours=4), (SELECT IDtypecours FROM typecours WHERE IDtypecours=7));
+	VALUES (24, 3, 10, 11, 2, (SELECT IDcours FROM cours WHERE IDcours=4), (SELECT IDtypecours FROM typecours WHERE IDtypecours=7));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (22, 20200628, 16, 17, 1, (SELECT IDcours FROM cours WHERE IDcours=5), (SELECT IDtypecours FROM typecours WHERE IDtypecours=3));
+	VALUES (22, 0, 10, 11, 1, (SELECT IDcours FROM cours WHERE IDcours=2), (SELECT IDtypecours FROM typecours WHERE IDtypecours=3));
 INSERT INTO `seance`(`Semaine`, `Date`, `HeureDebut`, `HeureFin`, `Etat`, `IDcours`, `IDtypecours`)
-	VALUES (23, 20200604, 8, 9, 1, (SELECT IDcours FROM cours WHERE IDcours=5), (SELECT IDtypecours FROM typecours WHERE IDtypecours=4));
+	VALUES (23, 5, 8, 9, 1, (SELECT IDcours FROM cours WHERE IDcours=1), (SELECT IDtypecours FROM typecours WHERE IDtypecours=4));
 
 -- Admin
 INSERT INTO `utilisateur`(`Email`, `MotDePasse`, `Nom`, `Prenom`, `Droit`)
@@ -489,9 +489,9 @@ INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`)
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (2, 1);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
-	VALUES (3, 2);
+	VALUES (3, 1);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
-	VALUES (4, 3);
+	VALUES (4, 1);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (4, 2);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
@@ -509,13 +509,13 @@ INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`)
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (7, 4);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
-	VALUES (7, 5);
+	VALUES (7, 1);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (7, 5);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (7, 6);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
-	VALUES (8, 4);
+	VALUES (8, 1);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (8, 5);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
@@ -525,29 +525,29 @@ INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`)
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
 	VALUES (9, 3);
 INSERT INTO `seancegroupe`(`IDseance`, `IDgroupe`) 
-	VALUES (10, 2);
+	VALUES (10, 1);
 
 -- Séance enseignant
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (5, 5);
+	VALUES (5, 9);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (6, 5);
+	VALUES (6, 6);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (1, 2);
+	VALUES (1, 5);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (2, 3);
+	VALUES (2, 7);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (3, 2);
+	VALUES (3, 5);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (4, 1);
+	VALUES (4, 9);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (7, 4);
+	VALUES (7, 8);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (8, 4);
+	VALUES (8, 8);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (9, 2);
+	VALUES (9, 5);
 INSERT INTO `seanceenseignant`(`IDseance`, `IDenseignant`) 
-	VALUES (10, 1);
+	VALUES (10, 6);
 
 
 -- Séance salle
