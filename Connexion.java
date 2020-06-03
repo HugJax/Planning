@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import Vue.*;
+import Modele.*;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -29,9 +30,13 @@ public class Connexion extends JPanel{
     protected JLabel pas;
     protected JButton login;
     private int[] idpers;
+    private Page pa;
+    private Utilisateur useractif = new Utilisateur();
+    private UserSQL con = new UserSQL();
     
     /// CONSTRUCTEURS
     Connexion(Page a){
+        pa=a;
         setLayout(null);
         use = new JLabel("Adresse e-mail");
         use.setBounds(850, 270, 300, 30);
@@ -39,8 +44,10 @@ public class Connexion extends JPanel{
         pas.setBounds(850, 320, 300, 30);
         user = new JTextField(30);
         user.setBounds(850, 295, 300, 25);
+        //user.setText("admin");// à supprimer à la fin
         pass = new JPasswordField(15);
         pass.setBounds(850, 345, 300, 25);
+        //pass.setText("admin");// à supprimer à la fin
         login = new JButton("Login");
         login.setBounds(1050, 400, 100, 30);
         add(use);
@@ -70,11 +77,11 @@ public class Connexion extends JPanel{
     /** Vérification identification */
     private class Login implements ActionListener {
             public void actionPerformed(ActionEvent e) {
-                    String id = user.getText();
-                    String mdp = String.valueOf(pass.getPassword());
-                    if("admin".equals(id) && "admin".equals(mdp)){
+                    int exi = con.existUser(user.getText(), String.valueOf(pass.getPassword()));
+                    if(exi == 1){
                         setVisible(false);
-                        Wall wall= new Wall();
+                        useractif = con.retrieveUser(user.getText(), String.valueOf(pass.getPassword()));
+                        Wall wall= new Wall(useractif.getID());
                     }
                 }
             }
