@@ -1,7 +1,7 @@
 /*
  * Classe objet correspondant à une promotion
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -13,17 +13,20 @@ public class Promotion {
     private String m_promo;
     
     /// CONSTRUCTEURS
-    Promotion(){
+    public Promotion(){
         
     }
     
-    Promotion(int id, String promo){
+    public Promotion(int id, String promo){
         m_idpromo   = id;
         m_promo     = promo;
     }
     
     /// METHODES
     /** Fonction de récupération l'ID */
+    public void setID(int id){
+        m_idpromo = id;
+    }
     public int getID(){
         return m_idpromo;
     }

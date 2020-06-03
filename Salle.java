@@ -1,7 +1,7 @@
 /*
  * Classe objet de la salle utilisée
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -13,21 +13,24 @@ public class Salle
     private int m_idSalle;
     private String m_nom;
     private int m_capacite;
-    private Site m_site;
+    private int m_idsite;
     
     /// CONSTRUCTEURS
-    Salle(){
+    public Salle(){
         
     }
-    Salle(int id, String nom, int capacite, Site site){
+    public Salle(int id, String nom, int capacite, int site){
         m_idSalle   = id;
         m_nom       = nom;
         m_capacite  = capacite;
-        m_site      = site;
+        m_idsite      = site;
     }
     
     /// METHODES
     /** Fonction de récupération l'ID */
+    public void setID(int id){
+        m_idSalle = id;
+    }
     public int getID(){
         return m_idSalle;
     }
@@ -49,11 +52,11 @@ public class Salle
     }
     
     /** Fonction de récupération ou pour set le site */
-    public Site getSite(){
-        return m_site;
+    public int getSite(){
+        return m_idsite;
     }
-    public void setSite(Site site){
-        m_site       = site;
+    public void setSite(int site){
+        m_idsite       = site;
     }
     
 }

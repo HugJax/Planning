@@ -3,17 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controleur;
+package Controleur;
 
 /**
  *
  * @author Rémi Fiorenza
  */
-public abstract class Enseignant extends Utilisateur
+public class Enseignant extends Utilisateur
 {
-    //ATTRIBUTS
-    private Cours m_cours;
-    private SeanceEnseignant m_seance;
+    /// ATTRIBUTS
+    private int m_idcours;
     
-    //METHODES
+    /// CONSTRUCTEUR
+    public Enseignant(){
+        
+    }
+    
+    /// METHODES
+    public void setIDcours(int id){
+        m_idcours = id;
+    }
+    public int getIDcours(){
+        return m_idcours;
+    }
+    
 }

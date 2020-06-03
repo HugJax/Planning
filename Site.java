@@ -1,7 +1,7 @@
 /*
  * Classe objet correspondant au batiment utilisé pour faire cours
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -14,11 +14,11 @@ public class Site
     private String m_nom;
     
     /// CONSTRUCTEURS
-    Site(){
+    public Site(){
         
     }
     
-    Site(int id, String nom){
+    public Site(int id, String nom){
         m_idSite   = id;
         m_nom     = nom;
     }
@@ -27,6 +27,9 @@ public class Site
     /** Fonction de récupération l'ID */
     public int getID(){
         return m_idSite;
+    }
+    public void setID(int id){
+        m_idSite = id;
     }
     
     /** Fonction de récupération ou pour set le lieu */
