@@ -1,7 +1,7 @@
 /*
  * Classe objet correspondant à la matière du cours
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -14,19 +14,32 @@ public class Cours
     private String m_nom;
     
     /// CONSTRUCTEURS
-    Cours(){
+    public Cours(){
         
     }
     
-    Cours(int id, String nom){
+    public Cours(int id, String nom){
         m_idCours   = id;
         m_nom       = nom;
     }
     
     /// METHODES
+    /**affichage*/
+    public void afficher()
+    {
+        System.out.println("Cours Data");
+        System.out.println(m_idCours);
+        System.out.println(m_nom);
+    }
+    
     /** Fonction de récupération l'ID */
     public int getID(){
         return m_idCours;
+    }
+    
+    public void setID(int id)
+    {
+        m_idCours = id;
     }
     
     /** Fonction de récupération ou pour set la matière */

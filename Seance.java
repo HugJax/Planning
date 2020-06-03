@@ -1,7 +1,7 @@
 /*
  * Classe objet de la séance de cours
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -16,29 +16,62 @@ public class Seance
     private int m_heureDebut;
     private int m_heureFin;
     private int m_etat;
-    private TypeCours m_typeCours;
-    private Cours m_cours;
+    private int m_idtypeCours;
+    private int m_idcours;
     
     /// CONSTRUCTEURS
-    Seance(){
+    public Seance(){
         
     }
     
-    Seance(int id, int semaine, int date, int hrsdeb, int hrsfin, int etat, TypeCours typecours, Cours cours){
+    public Seance(int id, int idcours, int idtype){
+        m_idSeance      = id;
+        m_idtypeCours     = idtype;
+        m_idcours         = idcours;
+    }
+    
+    public Seance(int id, int semaine, int date, int hdeb, int hfin){
+        m_idSeance      = id;
+        m_semaine       = semaine;
+        m_date          = date;
+        m_heureDebut    = hdeb;
+        m_heureFin      = hfin;
+    }
+    
+    public Seance(int id, int semaine, int date, int hrsdeb, int hrsfin, int etat, int typecours, int cours){
         m_idSeance      = id;
         m_semaine       = semaine;
         m_date          = date;
         m_heureDebut    = hrsdeb;
         m_heureFin      = hrsfin;
         m_etat          = etat;
-        m_typeCours     = typecours;
-        m_cours         = cours;
+        m_idtypeCours     = typecours;
+        m_idcours         = cours;
     }
     
     /// METHODES
+    
+    /**
+     * Fonction afficher 
+     */
+    public void afficher()
+    {
+        System.out.println("Seance Data");
+        System.out.println(m_idSeance);
+        System.out.println(m_semaine);
+        System.out.println(m_date);
+        System.out.println(m_heureDebut);
+        System.out.println(m_heureFin);
+        System.out.println(m_etat);
+    }
+    
+    
     /** Fonction de récupération l'ID */
     public int getID(){
         return m_idSeance;
+    }
+    public void setID(int id){
+         m_idSeance = id;
     }
     
     /** Fonction de récupération ou pour set la semaine */
@@ -82,19 +115,19 @@ public class Seance
     }
     
     /** Fonction de récupération ou pour set le type de cours */
-    public TypeCours getTypeCours(){
-        return m_typeCours;
+    public int getTypeCours(){
+        return m_idtypeCours;
     }
-    public void setTypeCours(TypeCours type){
-        m_typeCours     = type;
+    public void setTypeCours(int type){
+        m_idtypeCours     = type;
     }
     
     /** Fonction de récupération ou pour set la matière */
-    public Cours getCours(){
-        return m_cours;
+    public int getCours(){
+        return m_idcours;
     }
-    public void setCours(Cours type){
-        m_cours         = type;
+    public void setCours(int type){
+        m_idcours         = type;
     }
     
     
