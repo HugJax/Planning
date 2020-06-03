@@ -18,8 +18,7 @@ import java.util.ArrayList;
  */
 public class Wall extends JFrame{
    private JTabbedPane panelOnglet;
-   private JPanel[] onglet = new JPanel[53];
-   private JLabel[] edtsemaines = new JLabel[53];
+   private JPanel[] onglet = new JPanel[5];
    
    public Wall(){
       panelOnglet = new JTabbedPane();

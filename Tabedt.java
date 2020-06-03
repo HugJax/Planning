@@ -4,6 +4,8 @@
 package Vue;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
