@@ -46,6 +46,9 @@ public class AfficheProfil extends JPanel{
             prom = conbis.retrievePromo(etu.getPromo());
             info = info + "</li><li>Promo :" + prom.getPromo() + "</li><li>Groupe :" + grp.getGroupe();
             infoVa = "Promo et Groupe :";
+            add(new JLabel("<html><h2>" + infoVa + "</h2></html>", null, JLabel.CENTER));
+            JLabel j3 = new JLabel(info, null, JLabel.CENTER);
+            add(j3);
         }
         if(useractif.getDroit()==3)
         {
@@ -54,6 +57,9 @@ public class AfficheProfil extends JPanel{
             info = cours.getNom();
             //info = info + "</li><li>Matière :" + cours.getNom();
             infoVa = "Matière :";
+            add(new JLabel("<html><h2>" + infoVa + "</h2></html>", null, JLabel.CENTER));
+            JLabel j3 = new JLabel(info, null, JLabel.CENTER);
+            add(j3);
         }
             
         //info = info + "</li></ul></html>";
@@ -63,7 +69,7 @@ public class AfficheProfil extends JPanel{
         
         add(new JLabel("<html><h2> Nom :</h2></html>", null, JLabel.CENTER));
         add(new JLabel("<html><h2> Prenom :</h2></html>", null, JLabel.CENTER));
-        add(new JLabel("<html><h2>" + infoVa + "</h2></html>", null, JLabel.CENTER));
+        
         
         String temp="<html>"  + useractif.getNom() + "</html>";
         JLabel j1 = new JLabel(temp, null, JLabel.CENTER);
@@ -71,7 +77,7 @@ public class AfficheProfil extends JPanel{
         String temp1="<html>"  + useractif.getPrenom()+ "</html>";
         JLabel j2 = new JLabel(temp1, null, JLabel.CENTER);
         
-        JLabel j3 = new JLabel(info, null, JLabel.CENTER);
+        
         
         JLabel j4 = new JLabel("", null, JLabel.CENTER);
         
@@ -84,7 +90,6 @@ public class AfficheProfil extends JPanel{
         bouton.addActionListener(new Deco());
         add(j1);
         add(j2);
-        add(j3);
         add(j4);
       //  this.add(profil);
         this.add(bouton);
