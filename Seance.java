@@ -1,7 +1,7 @@
 /*
  * Classe objet de la séance de cours
  */
-package controleur;
+package Controleur;
 
 /**
  *
@@ -16,23 +16,44 @@ public class Seance
     private int m_heureDebut;
     private int m_heureFin;
     private int m_etat;
-    private TypeCours m_typeCours;
-    private Cours m_cours;
+    private int m_idtypeCours;
+    private int m_idcours;
+    private String m_cours;
+    private String m_typescours;
+    private String m_salle;
+    private String m_site;
+    private String m_promotion;
+    private String m_groupe;
+    private String m_enseignant;
     
     /// CONSTRUCTEURS
     public Seance(){
         
     }
     
-    public Seance(int id, int semaine, int date, int hrsdeb, int hrsfin, int etat, TypeCours typecours, Cours cours){
+    public Seance(int id, int idcours, int idtype){
+        m_idSeance      = id;
+        m_idtypeCours     = idtype;
+        m_idcours         = idcours;
+    }
+    
+    public Seance(int id, int semaine, int date, int hdeb, int hfin){
+        m_idSeance      = id;
+        m_semaine       = semaine;
+        m_date          = date;
+        m_heureDebut    = hdeb;
+        m_heureFin      = hfin;
+    }
+    
+    public Seance(int id, int semaine, int date, int hrsdeb, int hrsfin, int etat, int typecours, int cours){
         m_idSeance      = id;
         m_semaine       = semaine;
         m_date          = date;
         m_heureDebut    = hrsdeb;
         m_heureFin      = hrsfin;
         m_etat          = etat;
-        m_typeCours     = typecours;
-        m_cours         = cours;
+        m_idtypeCours     = typecours;
+        m_idcours         = cours;
     }
     
     /// METHODES
@@ -49,9 +70,6 @@ public class Seance
         System.out.println(m_heureDebut);
         System.out.println(m_heureFin);
         System.out.println(m_etat);
-        m_typeCours.afficher();
-        m_cours.afficher();
-        
     }
     
     
@@ -104,21 +122,94 @@ public class Seance
     }
     
     /** Fonction de récupération ou pour set le type de cours */
-    public TypeCours getTypeCours(){
-        return m_typeCours;
+    public int getTypeCours(){
+        return m_idtypeCours;
     }
-    public void setTypeCours(TypeCours type){
-        m_typeCours     = type;
+    public void setTypeCours(int type){
+        m_idtypeCours     = type;
     }
     
     /** Fonction de récupération ou pour set la matière */
-    public Cours getCours(){
+    public int getCours(){
+        return m_idcours;
+    }
+    public void setCours(int type){
+        m_idcours         = type;
+    }
+    
+    /**
+     *
+     * @return
+     */
+     /** Fonction de récupération ou pour set la matière
+     * @return  */
+    public String getCoursNom(){
         return m_cours;
     }
-    public void setCours(Cours type){
+    
+    public void setCoursNom(String type){
         m_cours         = type;
     }
     
+     /** Fonction de récupération ou pour set la cour
+     * @return s*/
+     public String gettypeCoursNom(){
+        return m_typescours;
+    }
+    
+    public void settypeCoursNom(String type){
+        m_typescours         = type;
+    }
+    
+     /** Fonction de récupération ou pour set la salle
+     * @return  */
+     public String getsalle(){
+        return m_salle;
+    }
+    
+    public void setsalle(String type){
+        m_salle         = type;
+    }
+    
+     /** Fonction de récupération ou pour set le site
+     * @return  */
+     public String getsite(){
+        return m_site;
+    }
+    
+    public void setsite(String type){
+        m_site       = type;
+    }
+    
+     /** Fonction de récupération ou pour set la promotion
+     * @return  */
+     public String getpromotion(){
+        return m_promotion;
+    }
+    
+    public void setpromotion(String type){
+        m_promotion         = type;
+    }
+    
+     /** Fonction de récupération ou pour set le groupe
+     * @return  */
+     public String getgroupe(){
+        return m_groupe;
+    }
+    
+    public void setgroupe(String type){
+        m_groupe        = type;
+    }
+    
+     /** Fonction de récupération ou pour set le groupe
+     * @return  */
+     public String getenseignant(){
+        return m_enseignant;
+    }
+    
+    public void setenseignant(String type){
+        m_enseignant        = type;
+    }
     
     
 }
